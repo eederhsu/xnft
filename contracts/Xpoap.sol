@@ -4,7 +4,7 @@ pragma solidity ^0.8.20;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
-contract XNFT is ERC721 {
+contract Xpoap is ERC721 {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIdCounter;
 
@@ -14,7 +14,7 @@ contract XNFT is ERC721 {
     // Address allowed to mint tokens
     address private _mintingAuthority;
 
-    constructor(string memory s_baseURI) ERC721("XNFT", "XNFT") {
+    constructor(string memory s_baseURI) ERC721("Xpoap", "Xpoap") {
         _mintingAuthority = msg.sender; // Set the deployer as the initial minting authority
         setBaseURI(s_baseURI);
     }
